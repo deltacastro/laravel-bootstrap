@@ -1,0 +1,57 @@
+$blue:    #5d9eff;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #d63384;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #198754;
+$teal:    #20c997;
+$cyan:    #0dcaf0;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #373737;
+$gray-900: #212529;
+$blue-kpa: #1a86c8;
+$yellow-kpa: #f2b201;
+$red-kpa: #e1150f;
+$green-kpa: #0f9239;
+$navy-blue: #343e4d;
+$semi-black: #5b5b60;
+$white: #fafafa;
+$semi-white: #ffffff;
+
+$theme-colors: (
+  'primary': $blue,
+  'secondary': $gray-600,
+  'success': $green,
+  'info': $cyan,
+  'yellow': $yellow,
+  'green': $green,
+  'red': $red,
+  'navy-blue': $navy-blue,
+  'semi-black': $semi-black,
+  gray-100: $gray-100,
+  gray-200: $gray-200,
+  gray-300: $gray-300,
+  gray-400: $gray-400,
+  gray-500: $gray-500,
+  gray-600: $gray-600,
+  gray-700: $gray-700,
+  gray-800: $gray-800,
+  'white' : $white,
+  'semi-white': $semi-white
+);
+
+$enable-responsive-font-sizes: true;
+// $enable-gradients: true;
+
+$body-bg: #ececec;
+
+$input-bg: $white;
+$component-active-bg: $semi-black;
