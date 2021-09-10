@@ -1,5 +1,5 @@
-<nav class="navbar navbar-light navbar-expand-md bg-white justify-content-center shadow-sm mb-3">
-    <div class="col-12 px-3">
+<nav class="navbar navbar-light navbar-expand-md bg-transparent justify-content-center shadow-sm mb-3">
+    <div class="col-12 px-3 py-1">
         <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
             <h2 class="fw-bold">{{ env('APP_NAME') }}</h2>
             <ul class="nav navbar-nav ms-auto justify-content-end">

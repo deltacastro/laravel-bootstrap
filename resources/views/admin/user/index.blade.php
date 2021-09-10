@@ -1,9 +1,9 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="d-flex flex-wrap justify-content-center px-3 w-100">
+    <div class="d-flex flex-wrap justify-content-center px-5 mt-5 w-100">
         <div class="d-flex flex-wrap justify-content-between col-12">
-            <h2 class="col-12">Administrador de usuarios</h2>
+            <h2 class="col-12 mb-3">Administrador de usuarios</h2>
             <div class="col-8">
                 <x-form.float.input
                     id="searchInput"
@@ -12,7 +12,7 @@
                     error-validator="user-search" />
             </div>
             <div class="col-2 mb-3">
-                <button class="border-2 btn btn-outline-gray-800 col-12 h-100 nuevo"
+                <button class="border-3 fw-bold btn btn-outline-gray-800 col-12 h-100 nuevo"
                     data-url="/admin/usuarios/nuevo"
                     data-target="#user-offcanvas"
                     data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
