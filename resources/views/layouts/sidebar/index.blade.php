@@ -1,8 +1,5 @@
-<div class="d-flex flex-column flex-shrink-0 py-3 text-gray-800 bg-white shadow" style="width: 280px;">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-gray-800 text-decoration-none fs-4 my-5">
-        <svg class="bi me-2" width="40" height="32">
-            <use xlink:href="#bootstrap"></use>
-        </svg>
+<div class="d-flex flex-column flex-shrink-0 py-3 text-gray-800 bg-gray-100 shadow" style="width: 280px;">
+    <a href="/" class="d-flex align-items-center justify-content-center col-12 mb-3 mb-md-0 me-md-auto text-gray-800 text-decoration-none fs-4 my-5">
         <span class="fs-4">{{ env('APP_NAME') }}</span>
     </a>
     <hr>
