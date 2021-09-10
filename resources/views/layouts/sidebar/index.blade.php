@@ -3,7 +3,7 @@
         <svg class="bi me-2" width="40" height="32">
             <use xlink:href="#bootstrap"></use>
         </svg>
-        <span class="fs-4">LaraBoot</span>
+        <span class="fs-4">{{ env('APP_NAME') }}</span>
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto fw-bold">

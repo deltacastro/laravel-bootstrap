@@ -18,13 +18,19 @@
     </head>
     <body>
         <main>
-            @include('layouts.sidebar.index')
+            @auth
+                @include('layouts.sidebar.index')
+            @endauth
             <div class="col" style="overflow-y: auto;">
-                @include('layouts.navbar.index')
+                @auth
+                    @include('layouts.navbar.index')
+                @endauth
                 @yield('content')
             </div>
 
             @include('layouts.toast.index')
+            @yield('extra_divs')
+            @stack('extra_divs')
         </main>
         <script src="{{ asset('js/bootstrap5.js') }}"></script>
         <script src="{{ asset('js/select2.js') }}"></script>

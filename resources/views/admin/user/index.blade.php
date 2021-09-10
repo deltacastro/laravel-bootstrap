@@ -7,7 +7,7 @@
                 <h2>Administrador de usuarios</h2>
                 <div class="d-flex flex-wrap justify-content-between">
                     <div class="col-8">
-                        <x-form.input
+                        <x-form.float.input
                             id="searchInput"
                             type="text"
                             label="Buscar"
