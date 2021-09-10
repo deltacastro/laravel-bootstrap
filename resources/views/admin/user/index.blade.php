@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="d-flex flex-wrap justify-content-center px-5 mt-5 w-100">
+    <div class="d-flex flex-wrap justify-content-center px-3 mt-2 w-100">
         <div class="d-flex flex-wrap justify-content-between col-12">
             <h2 class="col-12 mb-3">Administrador de usuarios</h2>
             <div class="col-8">
