@@ -24,7 +24,10 @@ class UserController extends Controller
 
     public function list(Request $request)
     {
-        $users = $this->mUser->get();
+        $query = $request->input('search', null);
+        $users = $this->mUser
+            ->where('email', 'like', "%$query%")
+            ->get();
 
         return view('admin.user._list', compact('users'));
     }

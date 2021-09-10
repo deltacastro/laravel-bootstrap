@@ -10,7 +10,7 @@
         </thead>
         <tbody>
             @foreach ($users as $user)
-                <tr>
+                <tr class="align-middle fs-5 text-gray-700">
                     <td>{{ $user->personFullName }}</td>
                     <td>{{ $user->email }}</td>
                     <td>
@@ -21,13 +21,13 @@
                     <td>
                         <a
                             href="#"
-                            class="btn btn-sm border border-2 shadow-sm border-yellow fw-bold text-gray-800 editar"
+                            class="btn btn-outline-yellow fw-bold text-gray-700 editar"
                             data-url="{{ route('admin.user.edit', [$user->id]) }}"
                             data-target="#user-offcanvas"
                             data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Editar</a>
 
                         <a href="#"
-                            class="btn btn-sm border border-2 shadow-sm border-red fw-bold text-gray-800"
+                            class="btn btn-outline-red fw-bold text-gray-700"
                             onclick="event.preventDefault(); document.getElementById('delete-form-{{ $user->id }}').submit();"
                         >
                             Eliminar
