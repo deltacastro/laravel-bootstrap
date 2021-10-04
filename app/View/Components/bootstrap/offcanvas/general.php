@@ -10,17 +10,19 @@ class general extends Component
     public $qselector;
     public $parentElem;
     public $ajaxComponent;
+    public $offcanvasParentClass;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($parentElem, $qselector, $ajaxComponent = false)
+    public function __construct($offcanvasParentClass, $parentElem, $qselector, $ajaxComponent = false)
     {
         $this->qselector = $qselector;
         $this->parentElem = $parentElem;
         $this->ajaxComponent = $ajaxComponent;
+        $this->offcanvasParentClass = $offcanvasParentClass;
     }
 
     /**

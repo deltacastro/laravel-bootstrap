@@ -1,5 +1,5 @@
 <div>
-    <div class="offcanvas offcanvas-end w-25" tabindex="-1" id="offcanvas-general" aria-labelledby="offcanvasGeneralLabel">
+    <div class="offcanvas {{ $offcanvasParentClass }}" tabindex="-1" id="offcanvas-general" aria-labelledby="offcanvasGeneralLabel">
         <div class="offcanvas-header">
             <h5 id="offcanvasRightLabel"></h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>

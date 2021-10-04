@@ -27,6 +27,7 @@
     <x-bootstrap.offcanvas.general
         parentElem="#panel-container"
         qSelector=".showOffcanvas"
+        offcanvasParentClass="offcanvas-end delta-width-100 delta-width-md-75 delta-width-lg-50 delta-width-xxl-40"
         ajaxComponent="false" />
 
     <x-bootstrap.modal.confirmation

@@ -6,3 +6,39 @@ main {
     overflow-x: auto;
     overflow-y: hidden;
 }
+
+/* // X-Small devices (portrait phones, less than 576px) */
+/* // No media query for `xs` since this is the default in Bootstrap */
+
+.delta-width-100 {
+    width: 100% !important;
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .delta-width-md-75 {
+        width: 75% !important;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .delta-width-lg-50 {
+        width: 50% !important;
+    }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .delta-width-xxl-40 {
+        width: 40% !important;
+    }
+}
