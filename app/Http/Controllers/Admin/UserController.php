@@ -51,17 +51,15 @@ class UserController extends Controller
         ]);
     }
 
-    public function edit($user_id, Request $request)
+    public function edit(User $user, Request $request)
     {
-        $user = $this->mUser->where('id', $user_id)->first();
         $user_roles_id = $user->roles->pluck('id')->toArray();
         $roles = Role::get();
         return view('admin.user.edit', compact('user', 'user_roles_id', 'roles'));
     }
 
-    public function update($user_id, request $request)
+    public function update(User $user, request $request)
     {
-        $user = $this->mUser->where('id', $user_id)->first();
         $user->person->update(array_filter($request->person));
         $user->update(array_filter($request->user));
         $user->syncRoles($request->roles);
@@ -69,11 +67,8 @@ class UserController extends Controller
         return redirect()->back()->with('success', 'Se ha actualizado el usuario correctamente.');
     }
 
-    public function delete($user_id, request $request)
+    public function delete(User $user, request $request)
     {
-
-        $user = $this->mUser->where('id', $user_id)->first();
-
         if (!($user->hasRole('super admin'))) {
             $user->delete();
         }

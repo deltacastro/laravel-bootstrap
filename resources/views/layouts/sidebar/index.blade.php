@@ -13,11 +13,13 @@
         <li>
             <hr class="dropdown-divider">
         </li>
-        <li class="nav-item">
-            <a href="{{ route('admin.user.index') }}" class="nav-link text-gray-800 {{ (request()->is('admin/usuarios')) ? 'active disabled' : '' }}">
-                <i class="bi bi-people me-2"></i>
-                Admin Usuarios
-            </a>
-        </li>
+        @can('viewAny', App\Models\User::class)
+            <li class="nav-item">
+                <a href="{{ route('admin.user.index') }}" class="nav-link text-gray-800 {{ (request()->is('admin/usuarios')) ? 'active disabled' : '' }}">
+                    <i class="bi bi-people me-2"></i>
+                    Admin Usuarios
+                </a>
+            </li>
+        @endcan
     </ul>
 </div>
