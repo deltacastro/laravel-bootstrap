@@ -21,10 +21,9 @@
                     <td>
                         <a
                             href="#"
-                            class="btn btn-outline-yellow fw-bold text-gray-700 editar"
+                            class="btn btn-outline-yellow fw-bold text-gray-700 showOffcanvas"
                             data-url="{{ route('admin.user.edit', [$user->id]) }}"
-                            data-target="#user-offcanvas"
-                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Editar</a>
+                            data-titletext="Editar usuario {{ $user->personFullname }}">Editar</a>
 
                         <a href="#"
                             class="btn btn-outline-red fw-bold text-gray-700 eliminar"
