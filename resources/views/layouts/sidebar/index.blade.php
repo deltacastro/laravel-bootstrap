@@ -15,11 +15,17 @@
         </li>
         @can('viewAny', App\Models\User::class)
             <li class="nav-item">
-                <a href="{{ route('admin.user.index') }}" class="nav-link text-gray-800 {{ (request()->is('admin/usuarios')) ? 'active disabled' : '' }}">
+                <a href="{{ route('admin.user.index') }}" class="nav-link text-gray-800 {{ (request()->is('admin/usuarios')) ? 'active' : '' }}">
                     <i class="bi bi-people me-2"></i>
                     Admin Usuarios
                 </a>
             </li>
         @endcan
+        <li class="nav-item">
+            <a href="{{ route('admin.role.index') }}" class="nav-link text-gray-800 {{ (request()->is('admin/roles')) ? 'active' : '' }}">
+                <i class="bi bi-people me-2"></i>
+                Admin Roles
+            </a>
+        </li>
     </ul>
 </div>

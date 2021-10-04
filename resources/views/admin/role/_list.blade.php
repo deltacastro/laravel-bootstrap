@@ -1,21 +1,19 @@
-<div id="userTable" class="table-responsive">
+<div id="roleTable" class="table-responsive">
     <table class="table">
         <thead>
             <tr>
                 <th>Nombre</th>
-                <th>Correo</th>
-                <th>Roles</th>
-                <th></th>
+                <th>Permisos</th>
+                <th width="20%"></th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($users as $user)
+            @foreach ($roles as $role)
                 <tr class="align-middle fs-5 text-gray-700">
-                    <td>{{ $user->personFullName }}</td>
-                    <td>{{ $user->email }}</td>
+                    <td>{{ $role->name }}</td>
                     <td>
-                        @foreach ($user->roles as $role)
-                            <span class="badge bg-gray-600">{{ $role->name }}</span>
+                        @foreach ($role->permissions as $permission)
+                            <span class="badge bg-gray-600">{{ $permission->name }}</span>
                         @endforeach
                     </td>
                     <td>
@@ -23,24 +21,24 @@
                         <a
                             href="#"
                             class="btn btn-outline-primary fw-bold text-gray-700 showOffcanvas"
-                            data-url="{{ route('admin.user.permission.edit', [$user->id]) }}"
-                            data-titletext="Permisos del usuario {{ $user->name }}">Permisos</a>
+                            data-url="{{ route('admin.role.permission.edit', [$role->id]) }}"
+                            data-titletext="Permisos del rol {{ $role->name }}">Permisos</a>
 
                         <a
                             href="#"
                             class="btn btn-outline-yellow fw-bold text-gray-700 showOffcanvas"
-                            data-url="{{ route('admin.user.edit', [$user->id]) }}"
-                            data-titletext="Editar usuario {{ $user->personFullname }}">Editar</a>
+                            data-url="{{ route('admin.role.edit', [$role->id]) }}"
+                            data-titletext="Editar el rol {{ $role->name }}">Editar</a>
 
                         <a href="#"
                             class="btn btn-outline-red fw-bold text-gray-700 eliminar"
                             data-bs-toggle="modal" data-bs-target="#confirmationModal"
-                            data-targetform="#delete-form-{{ $user->id }}"
-                            data-text="Desea eliminar el usuario {{ $user->personFullName }}"
+                            data-targetform="#delete-form-{{ $role->id }}"
+                            data-text="Desea eliminar el rol {{ $role->name }}"
                         >
                             Eliminar
                         </a>
-                        <form id="delete-form-{{ $user->id }}" action="{{ route('admin.user.delete', [$user->id]) }}" method="POST" style="display: none;">
+                        <form id="delete-form-{{ $role->id }}" action="{{ route('admin.role.delete', [$role->id]) }}" method="POST" style="display: none;">
                             @csrf
                             @method('DELETE')
                         </form>

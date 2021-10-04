@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Permission;
 use App\Models\Person;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -15,6 +16,7 @@ class UserController extends Controller
         $this->mUser = new User;
         $this->mRole = new Role;
         $this->mPerson = new Person;
+        $this->mPermission = new Permission;
     }
 
     public function index()
@@ -74,5 +76,21 @@ class UserController extends Controller
         }
 
         return redirect()->back()->with('success', 'Usuario eliminado correctamente');
+    }
+
+    public function editUserPermissions(User $user)
+    {
+        $rolePermissionsIds = $user->getPermissionsViaRoles()->pluck('id')->toArray();
+        $userPermissionsIds = $user->permissions->pluck('id')->toArray();
+        $permissions = $this->mPermission->whereNotIn('id', $rolePermissionsIds)->get();
+        return view('admin.user.permission.edit', compact('user', 'userPermissionsIds', 'permissions'));
+    }
+
+    public function updateUserPermissions(Request $request, User $user)
+    {
+        $user->syncPermissions($request->user['permissions_id'] ?? []);
+        return response()->json([
+            'status_name' => 'success'
+        ]);
     }
 }

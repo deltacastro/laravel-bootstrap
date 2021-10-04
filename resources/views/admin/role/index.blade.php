@@ -3,18 +3,20 @@
 @section('content')
     <div id="panel-container" class="d-flex flex-wrap justify-content-center px-3 mt-2 w-100">
         <div class="d-flex flex-wrap justify-content-between col-12">
-            <h2 class="col-12 mb-3">Administrador de usuarios</h2>
+            <h2 class="col-12 mb-3">Administrador de roles</h2>
             <div class="col-8">
                 <x-form.float.input
                     id="searchInput"
+                    data-url="{{ route('admin.role.list') }}"
+                    data-ajaxdiv="#ajax-div"
                     type="text"
                     label="Buscar"
-                    error-validator="user-search" />
+                    error-validator="role-search" />
             </div>
             <div class="col-2 mb-3">
                 <button class="border-3 fw-bold btn btn-outline-gray-800 col-12 h-100 showOffcanvas"
-                    data-url="/admin/usuarios/nuevo"
-                    data-titletext="Nuevo usuario">
+                    data-url="{{ route('admin.role.create') }}"
+                    data-titletext="Nuevo rol">
                     Nuevo
                 </button>
             </div>
@@ -39,9 +41,9 @@
 
 @section('javascript')
     <script>
-        const url_list = '/admin/usuarios/lista'
-        const ajaxDiv = '#ajax-div'
-        const list_table = '#userTable'
+        const url_list = $('#searchInput').data('url')
+        const ajaxDiv = $('#searchInput').data('ajaxdiv')
+        const list_table = '#roleTable'
         const finalizado_action = '.ajax-action'
         let typingTimer;
         let doneTypingInterval = 500;
@@ -51,6 +53,7 @@
         }
 
         function reloadTable() {
+            console.log(ajaxDiv);
             $(`${list_table}.table-responsive`).fadeOut('slow')
             loading(ajaxDiv)
             $.get(url_list, function (data) {
