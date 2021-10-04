@@ -1,4 +1,4 @@
-$blue:    #5d9eff;
+$blue:    #0092ffff;
 $indigo:  #6610f2;
 $purple:  #6f42c1;
 $pink:    #d63384;
@@ -21,14 +21,14 @@ $blue-kpa: #1a86c8;
 $yellow-kpa: #f2b201;
 $red-kpa: #e1150f;
 $green-kpa: #0f9239;
-$navy-blue: #343e4d;
+$navy-blue: #00467aff;
 $semi-black: #5b5b60;
 $white: #fafafa;
 $semi-white: #ffffff;
 
 $theme-colors: (
   'primary': $blue,
-  'secondary': $gray-600,
+  'secondary': $navy-blue,
   'success': $green,
   'info': $cyan,
   'yellow': $yellow,
