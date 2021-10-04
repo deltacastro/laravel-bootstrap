@@ -27,8 +27,10 @@
                             data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Editar</a>
 
                         <a href="#"
-                            class="btn btn-outline-red fw-bold text-gray-700"
-                            onclick="event.preventDefault(); document.getElementById('delete-form-{{ $user->id }}').submit();"
+                            class="btn btn-outline-red fw-bold text-gray-700 eliminar"
+                            data-bs-toggle="modal" data-bs-target="#confirmationModal"
+                            data-targetform="#delete-form-{{ $user->id }}"
+                            data-text="Desea eliminar el usuario {{ $user->personFullName }}"
                         >
                             Eliminar
                         </a>
