@@ -1,8 +1,6 @@
 {
-    "/js/app.js": "/js/app.js",
     "/js/bootstrap5.js": "/js/bootstrap5.js",
     "/js/select2.js": "/js/select2.js",
     "/js/moment.js": "/js/moment.js",
-    "/css/app.css": "/css/app.css",
     "/css/bootstrap.css": "/css/bootstrap.css"
 }
