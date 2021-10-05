@@ -1,4 +1,7 @@
 <div class="col-12">
+    <div id="statusResponse">
+
+    </div>
     <x-form.float.input
         id="permission-search-input"
         type="text"
@@ -84,7 +87,7 @@
                 .done(function(response){
                     const html_data = `
                         <p class="fs-5 mb-3 p-4 bg-success fw-bold text-gray-100">
-                            Rol guardado correctamente
+                            Permiso actualizado correctamente
                         </p>
                     `
                     statusResponse.html(html_data)

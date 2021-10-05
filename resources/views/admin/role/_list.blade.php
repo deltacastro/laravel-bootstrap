@@ -1,5 +1,5 @@
 <div id="roleTable" class="table-responsive">
-    <table class="table">
+    <table class="table" style="white-space:nowrap;">
         <thead>
             <tr>
                 <th>Nombre</th>

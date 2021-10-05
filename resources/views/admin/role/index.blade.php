@@ -13,7 +13,7 @@
                     label="Buscar"
                     error-validator="role-search" />
             </div>
-            <div class="col-2 mb-3">
+            <div class="col-3 col-md-2 mb-3">
                 <button class="border-3 fw-bold btn btn-outline-gray-800 col-12 h-100 showOffcanvas"
                     data-url="{{ route('admin.role.create') }}"
                     data-titletext="Nuevo rol">
