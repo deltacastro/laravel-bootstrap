@@ -1,11 +1,14 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="d-flex justify-content-center align-items-center h-100 bg-gray-200">
-        <div class="card shadow-lg col-11 col-md-8 col-lg-6 col-xl-4">
+    <div class="d-flex justify-content-center justify-content-lg-around align-items-center h-100 bg-gray-200 container-lg">
+        <div class="d-none d-lg-flex col-5">
+            <img class="img-fluid my-3 col-12" src="{{ asset('images/logo.png') }}" alt="">
+        </div>
+        <div class="card shadow-lg col-11 col-md-8 col-lg-5 col-xl-4 py-3 py-lg-5">
             <form method="POST" action="{{ route('login') }}" class="card-body text-gray-700 fw-bold">
                 <div class="col mb-4 d-flex flex-wrap justify-content-center">
-                    <img class="img-fluid px-5 my-3 col-12" src="{{ asset('images/logo.png') }}" alt="" style="width: 60%;">
+                    <img class="d-lg-none img-fluid px-5 my-3 col-12" src="{{ asset('images/logo.png') }}" alt="" style="width: 60%;">
                     <h4 class="fw-bold text-center text-gray-800 col-12">Iniciar Sesión</h4>
                 </div>
                 @csrf
