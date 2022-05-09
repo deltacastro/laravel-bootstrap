@@ -4,7 +4,7 @@
     <div id="panel-container" class="d-flex flex-wrap justify-content-center px-3 mt-2 w-100">
         <div class="d-flex flex-wrap justify-content-between col-12">
             <h2 class="col-12 mb-3">Administrador de roles</h2>
-            <div class="col-8">
+            <div class="col-8 mb-3">
                 <x-form.float.input
                     id="searchInput"
                     data-url="{{ route('admin.role.list') }}"

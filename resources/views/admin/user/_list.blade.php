@@ -33,7 +33,7 @@
                             data-titletext="Editar usuario {{ $user->personFullname }}">Editar</a>
 
                         <a href="#"
-                            class="btn btn-outline-red fw-bold text-gray-700 eliminar"
+                            class="btn btn-danger fw-bold eliminar"
                             data-bs-toggle="modal" data-bs-target="#confirmationModal"
                             data-targetform="#delete-form-{{ $user->id }}"
                             data-text="Desea eliminar el usuario {{ $user->personFullName }}"

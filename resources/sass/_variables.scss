@@ -1,57 +1,93 @@
-$blue:    #0092ffff;
-$indigo:  #6610f2;
-$purple:  #6f42c1;
-$pink:    #d63384;
-$red:     #dc3545;
-$orange:  #fd7e14;
-$yellow:  #ffc107;
-$green:   #198754;
-$teal:    #20c997;
-$cyan:    #0dcaf0;
-$gray-100: #f8f9fa;
-$gray-200: #e9ecef;
-$gray-300: #dee2e6;
-$gray-400: #ced4da;
-$gray-500: #adb5bd;
-$gray-600: #6c757d;
-$gray-700: #495057;
-$gray-800: #373737;
-$gray-900: #212529;
-$blue-kpa: #1a86c8;
-$yellow-kpa: #f2b201;
-$red-kpa: #e1150f;
-$green-kpa: #0f9239;
-$navy-blue: #00467aff;
-$semi-black: #5b5b60;
-$white: #fafafa;
-$semi-white: #ffffff;
+// @import "~bootstrap/scss/functions"; // import only required things
+// @import "~bootstrap/scss/variables";
+
+// scss-docs-start color-variables
+$blue:    #0d6efd !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #d63384 !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #198754 !default;
+$teal:    #20c997 !default;
+$cyan:    #0dcaf0 !default;
+// scss-docs-end color-variables
+
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$acxede: #01518a !default;
+
+// scss-docs-start colors-map
+// $colors: (
+//   "blue":       $blue,
+//   "indigo":     $indigo,
+//   "purple":     $purple,
+//   "pink":       $pink,
+//   "red":        $red,
+//   "orange":     $orange,
+//   "yellow":     $yellow,
+//   "green":      $green,
+//   "teal":       $teal,
+//   "cyan":       $cyan,
+//   "white":      $white,
+//   "gray":       $gray-600,
+//   "gray-dark":  $gray-800,
+//   'acxede':     $acxede
+// ) !default;
+// scss-docs-end colors-map
+
+// scss-docs-start theme-color-variables
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-900 !default;
 
 $theme-colors: (
-  'primary': $blue,
-  'secondary': $navy-blue,
-  'success': $green,
-  'info': $cyan,
-  'yellow': $yellow,
-  'green': $green,
-  'red': $red,
-  'navy-blue': $navy-blue,
-  'semi-black': $semi-black,
-  gray-100: $gray-100,
-  gray-200: $gray-200,
-  gray-300: $gray-300,
-  gray-400: $gray-400,
-  gray-500: $gray-500,
-  gray-600: $gray-600,
-  gray-700: $gray-700,
-  gray-800: $gray-800,
-  'white' : $white,
-  'semi-white': $semi-white
+    "primary": $indigo,
+    "secondary": $purple,
+    "acxede": $acxede,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark,
+    'yellow': $yellow,
+    'green': $green,
+    'red': $red,
+    'gray-100': $gray-100,
+    'gray-200': $gray-200,
+    'gray-300': $gray-300,
+    'gray-400': $gray-400,
+    'gray-500': $gray-500,
+    'gray-600': $gray-600,
+    'gray-700': $gray-700,
+    'gray-800': $gray-800,
+    'gray-900': $gray-900,
 );
 
 $enable-responsive-font-sizes: true;
 // $enable-gradients: true;
 
-$body-bg: #ececec;
+// $body-bg: #ececec;
 
-$input-bg: $white;
-$component-active-bg: $gray-300;
+// $input-bg           : $white;
+// $component-active-bg: $gray-300;
+// $nav-link-color     : $gray-800;
+// $nav-pills-link-active-bg: $gray-800;
