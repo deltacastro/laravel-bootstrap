@@ -18,7 +18,7 @@ const mix = require('laravel-mix');
 // ]);
 
 mix.sass('resources/sass/bootstrap.scss', 'public/css')
-    .js('resources/js/bootstrap5.js', 'public/js');
+    .js('resources/js/bootstrap.js', 'public/js');
 
 mix.js('resources/js/select2.js', 'public/js');
 

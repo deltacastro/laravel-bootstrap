@@ -1,8 +1,8 @@
-<nav class="navbar navbar-light navbar-expand bg-transparent justify-content-center shadow-sm mb-3">
+<nav class="navbar navbar-light navbar-expand bg-transparent justify-content-center border-bottom border-1 mb-3">
     <div class="col-12 px-3 py-1">
         <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
             {{-- <h2 class="fw-bold">{{ env('APP_NAME') }}</h2> --}}
-            <button class="d-block d-md-none btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <button class="d-block d-xl-none btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                 Menu
             </button>
             <ul class="nav navbar-nav ms-auto justify-content-end">

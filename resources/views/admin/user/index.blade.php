@@ -1,26 +1,28 @@
 @extends('layouts.main')
 
 @section('content')
-    <div id="panel-container" class="d-flex flex-wrap justify-content-center px-3 mt-2 w-100">
-        <div class="d-flex flex-wrap justify-content-between col-12">
-            <h2 class="col-12 mb-3">Administrador de usuarios</h2>
-            <div class="col-8 mb-3">
-                <x-form.float.input
-                    id="searchInput"
-                    type="text"
-                    label="Buscar"
-                    error-validator="user-search" />
+    <div id="panel-container" class="d-flex flex-wrap justify-content-center col-12">
+        <div class="px-3 mt-2 col-12 col-xl-10 bg-white p-xl-3 rounded">
+            <div class="d-flex flex-wrap justify-content-between col-12">
+                <h5 class="col-12 mb-3 text-gray-600">Administrador de usuarios</h5>
+                <div class="col-8 mb-3">
+                    <x-form.float.input
+                        id="searchInput"
+                        type="text"
+                        label="Buscar"
+                        error-validator="user-search" />
+                </div>
+                <div class="col-3 col-md-2 mb-3">
+                    <button class="border-3 fw-bold btn btn-outline-gray-800 col-12 h-100 showOffcanvas"
+                        data-url="{{ route('admin.user.create') }}"
+                        data-titletext="Nuevo usuario">
+                        Nuevo
+                    </button>
+                </div>
             </div>
-            <div class="col-3 col-md-2 mb-3">
-                <button class="border-3 fw-bold btn btn-outline-gray-800 col-12 h-100 showOffcanvas"
-                    data-url="{{ route('admin.user.create') }}"
-                    data-titletext="Nuevo usuario">
-                    Nuevo
-                </button>
-            </div>
-        </div>
-        <div id="ajax-div" class="col-12">
+            <div id="ajax-div" class="col-12">
 
+            </div>
         </div>
     </div>
 

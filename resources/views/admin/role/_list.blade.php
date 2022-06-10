@@ -20,18 +20,18 @@
 
                         <a
                             href="#"
-                            class="btn btn-outline-primary fw-bold text-gray-700 showOffcanvas"
+                            class="btn btn-outline-primary fw-bold showOffcanvas"
                             data-url="{{ route('admin.role.permission.edit', [$role->id]) }}"
                             data-titletext="Permisos del rol {{ $role->name }}">Permisos</a>
 
                         <a
                             href="#"
-                            class="btn btn-outline-yellow fw-bold text-gray-700 showOffcanvas"
+                            class="btn btn-outline-yellow fw-bold showOffcanvas"
                             data-url="{{ route('admin.role.edit', [$role->id]) }}"
                             data-titletext="Editar el rol {{ $role->name }}">Editar</a>
 
                         <a href="#"
-                            class="btn btn-outline-red fw-bold text-gray-700 eliminar"
+                            class="btn btn-outline-red fw-bold eliminar"
                             data-bs-toggle="modal" data-bs-target="#confirmationModal"
                             data-targetform="#delete-form-{{ $role->id }}"
                             data-text="Desea eliminar el rol {{ $role->name }}"

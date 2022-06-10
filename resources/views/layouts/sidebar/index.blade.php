@@ -2,7 +2,7 @@
 
 </div> --}}
 
-<div class="d-none d-md-flex flex-column text-gray-800 bg-gray-100 shadow" style="width: 280px;">
+<div class="d-none d-xl-flex flex-column text-gray-800 bg-dark-blue border-end" style="width: 220px;">
     @include('layouts.sidebar.menu')
 </div>
 <div class="offcanvas offcanvas-start text-gray-800 bg-gray-100 shadow h-100" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
